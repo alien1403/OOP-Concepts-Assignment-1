@@ -78,6 +78,35 @@ public class Main {
             }
         }
     }
+    public void DeleteBook(){
+        System.out.println("Choose a book to delete it:");
+        int counter = 0;
+        for(Book b: books){
+            counter = counter + 1;
+            System.out.println(counter + b.getName());
+        }
+        Scanner scanner = new Scanner(System.in);
+        int choice = scanner.nextInt();
+        boolean ok = false;
+
+        while(ok == false){
+            if(choice >= books.size()){
+                System.out.println("Index out of range!");
+                System.out.println("Please select another index");
+                counter = 0;
+                for(Book b: books){
+                    counter = counter + 1;
+                    System.out.println(counter + b.getName());
+                }
+                choice = scanner.nextInt();
+            }else{
+                ok = true;
+            }
+        }
+
+        books.remove(choice - 1);
+        DisplayBooks();
+    }
 
     public static  void main(String[] args){
         Main x = new Main();
@@ -86,5 +115,6 @@ public class Main {
 
         x.AddBook();
         x.DisplayBooks();
+        x.DeleteBook();
     }
 }
