@@ -38,5 +38,13 @@ public class Main {
             x.Menu();
             choice = scanner1.nextInt();
         }while (choice != 0);
+
+        for(Book aux: books){
+            if(aux instanceof Novel){
+                ((Novel) aux).ShowNovel();
+            }else{
+                ((Album) aux).ShowAlbum();
+            }
+        }
     }
 }
