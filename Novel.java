@@ -19,5 +19,6 @@ public class Novel extends Book{
     public void ShowNovel(){
         super.DisplayBook();
         System.out.println("Type: " + type);
+        System.out.println();
     }
 }
