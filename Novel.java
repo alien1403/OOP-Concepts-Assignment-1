@@ -17,8 +17,7 @@ public class Novel extends Book{
     }
 
     public void ShowNovel(){
-        System.out.println("Name: " + name );
-        System.out.println("Number of pages: " + numberOfPages);
+        super.DisplayBook();
         System.out.println("Type: " + type);
     }
 }

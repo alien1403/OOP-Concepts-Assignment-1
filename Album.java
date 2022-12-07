@@ -15,8 +15,7 @@ public class Album extends Book {
     }
 
     public void ShowAlbum(){
-        System.out.println("Name: " + name );
-        System.out.println("Number of pages: " + numberOfPages);
+        super.DisplayBook();
         System.out.println("Paper Quality: " + paperQuality);
     }
 }

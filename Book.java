@@ -22,26 +22,15 @@ public class Book {
         return getNoOfPages();
     }
 
-    public Book AddBook(){
-        System.out.println("Add a new book!");
-        System.out.println("1. Novel");
-        System.out.println("2. Album");
-        System.out.println("Choose the book type: ");
-        Scanner scanner = new Scanner(System.in);
-        Scanner scanner1 = new Scanner(System.in);
-        int choice = scanner1.nextInt();
-        String name = scanner.nextLine();
-        int noOfPages = scanner1.nextInt();
-        Book b;
-        if(choice == 1){
-            String type = scanner.nextLine();
-            b = new Novel(name, noOfPages, type);
-        }else{
-            String pageQuality = scanner.nextLine();
-            b = new Album(name, noOfPages, pageQuality);
-        }
-        return b;
+    public void setName(String name){
+        this.name = name;
+    }
+    public  void setNumberOfPages(Integer numberOfPages){
+        this.numberOfPages = numberOfPages;
     }
 
-
+    public void DisplayBook(){
+        System.out.println("Book name: " + name);
+        System.out.println("Number of pages: " + numberOfPages);
+    }
 }
