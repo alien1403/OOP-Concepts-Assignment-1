@@ -11,15 +11,15 @@ public class Main {
             System.out.println("Your choice: ");
             int choice = scanner.nextInt();
             if(choice == 0)
-                s.AddBooks();
+                s.addBooks();
             else if(choice == 1)
-                s.DisplayBooks();
+                s.displayBooks();
             else if(choice == 2)
-                s.DisplayBook();
+                s.displayBook();
             else if(choice == 3)
-                s.AddBook();
+                s.addBook();
             else if (choice == 4)
-                s.DeleteBook();
+                s.deleteBook();
             else if(choice == 5)
                 break;
             else

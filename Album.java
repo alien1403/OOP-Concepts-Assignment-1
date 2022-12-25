@@ -14,8 +14,8 @@ public class Album extends Book {
         this.paperQuality = paperQuality;
     }
 
-    public void ShowAlbum(){
-        super.DisplayBook();
+    public void showAlbum(){
+        super.displayBook();
         System.out.println("Paper Quality: " + paperQuality);
         System.out.println();
     }

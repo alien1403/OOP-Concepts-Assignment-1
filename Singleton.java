@@ -12,7 +12,7 @@ public class Singleton {
         return instance;
     }
 
-    public void DisplayOptions(){
+    public void displayOptions(){
         System.out.println("1. Novel");
         System.out.println("2. Album");
         System.out.println("Enter your choice: ");
@@ -27,7 +27,7 @@ public class Singleton {
         System.out.println("5. Exit");
     }
 
-    public void AddBooks(){
+    public void addBooks(){
 
         String name;
         Integer noOfPages;
@@ -38,7 +38,7 @@ public class Singleton {
         int numberOfBooks = scanner1.nextInt();
 
         for(int i=0;i<numberOfBooks;i++){
-            DisplayOptions();
+            displayOptions();
             int choice = scanner1.nextInt();
             System.out.println("Enter the book name: ");
             name = scanner.nextLine();
@@ -58,21 +58,21 @@ public class Singleton {
         }
     }
 
-    public void DisplayBooks(){
+    public void displayBooks(){
         int counter = 0;
         for(Book aux : books){
             counter = counter + 1;
             if(aux instanceof Album){
                 System.out.println("Book nr " + counter + " type of: Album");
-                ((Album) aux).ShowAlbum();
+                ((Album) aux).showAlbum();
             }else {
                 System.out.println("Book nr " + counter + " type of: Novel");
-                ((Novel) aux).ShowNovel();
+                ((Novel) aux).showNovel();
             }
         }
     }
 
-    public void Display(){
+    public void display(){
         int counter = 0;
 
         for(Book aux : books){
@@ -81,8 +81,8 @@ public class Singleton {
         }
     }
 
-    public void DisplayBook(){
-        Display();
+    public void displayBook(){
+        display();
         Scanner scanner = new Scanner(System.in);
         boolean ok = true;
         while(ok == true){
@@ -97,9 +97,9 @@ public class Singleton {
                     counter = counter + 1;
                     if(counter == index - 1){
                         if(aux instanceof Album){
-                            ((Album) aux).ShowAlbum();
+                            ((Album) aux).showAlbum();
                         }else{
-                            ((Novel) aux).ShowNovel();
+                            ((Novel) aux).showNovel();
                         }
                     }
                 }
@@ -107,9 +107,9 @@ public class Singleton {
         }
     }
 
-    public void AddBook(){
+    public void addBook(){
         System.out.println("Adauga o carte noua!");
-        DisplayOptions();
+        displayOptions();
         Scanner scanner = new Scanner(System.in);
         Scanner scanner1 = new Scanner(System.in);
 
@@ -133,7 +133,7 @@ public class Singleton {
         books.add(b);
     }
 
-    public void DeleteBook(){
+    public void deleteBook(){
         System.out.println("Select an index:");
         int counter = 0;
         for(Book b: books){
@@ -160,6 +160,6 @@ public class Singleton {
         }
 
         books.remove(choice - 1);
-        DisplayBooks();
+        displayBooks();
     }
 }

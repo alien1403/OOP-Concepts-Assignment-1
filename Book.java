@@ -29,7 +29,7 @@ public class Book {
         this.numberOfPages = numberOfPages;
     }
 
-    public void DisplayBook(){
+    public void displayBook(){
         System.out.println("Book name: " + name);
         System.out.println("Number of pages: " + numberOfPages);
     }
